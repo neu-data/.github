@@ -1,0 +1,6 @@
+{
+  "name": "Neudata Python CI",
+  "description": "Install dependencies, lint with ruff and test with pytest for Neudata Python projects.",
+  "iconName": "neudata",
+  "categories": ["Python"]
+}

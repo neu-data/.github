@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 General enquiries & partnerships
+    url: https://www.neu-data.com
+    about: For consulting, training or collaboration enquiries, visit our website or email contact@neu-data.com.
+  - name: 🔒 Report a security or data-protection concern
+    url: https://github.com/neu-data/.github/blob/main/SECURITY.md
+    about: Please do not open public issues for vulnerabilities or exposed data. Follow our security policy instead.

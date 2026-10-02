@@ -1,0 +1,6 @@
+{
+  "name": "Neudata R check",
+  "description": "Restore renv, lint and run testthat tests for Neudata R projects.",
+  "iconName": "neudata",
+  "categories": ["R"]
+}

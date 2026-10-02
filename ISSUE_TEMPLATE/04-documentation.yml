@@ -1,0 +1,22 @@
+name: 📘 Documentation
+description: Report missing, unclear or outdated documentation, vignettes or training material.
+title: "[Docs]: "
+labels: ["type: docs"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Where is the documentation?
+      description: File path, URL or function name.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is missing or unclear?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement

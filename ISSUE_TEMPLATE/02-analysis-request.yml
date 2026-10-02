@@ -1,0 +1,64 @@
+name: 📊 Analysis or feature request
+description: Request a new analysis, output, model, dashboard feature or enhancement.
+title: "[Request]: "
+labels: ["type: request", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the need in terms of the **question you want answered** or the **decision it will support**. We'll help shape the method.
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question or objective
+      description: What do you want to learn, estimate, build or improve?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Background and motivation
+      description: Why is this needed now? Who will use the result?
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of request
+      options:
+        - Descriptive / exploratory analysis
+        - Statistical modelling / inference
+        - Machine learning / prediction
+        - Sample-size or power calculation
+        - Data cleaning / quality control
+        - Visualisation / dashboard feature
+        - Report, table or figure
+        - Software / package feature
+        - Training material
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data involved
+      description: Which datasets, variables and time periods? Describe — do **not** attach — sensitive data.
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Expected deliverable
+      description: e.g. table of adjusted estimates, interactive plot, cleaned dataset, manuscript-ready figure.
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Target date (if any)
+      placeholder: YYYY-MM-DD
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical / blocking

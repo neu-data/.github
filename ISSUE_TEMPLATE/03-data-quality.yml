@@ -1,0 +1,58 @@
+name: 🧪 Data quality issue
+description: Report suspicious, missing, inconsistent or out-of-range values in a dataset.
+title: "[Data]: "
+labels: ["type: data-quality", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Refer to records by **study ID or row key only** — never paste names, contact details or other identifiers.
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset / file
+      description: Name, version or path of the affected dataset.
+      placeholder: data/raw/survey_round2_v3.csv
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of issue
+      multiple: true
+      options:
+        - Missing values
+        - Out-of-range / implausible values
+        - Duplicate records
+        - Inconsistent coding or units
+        - Date / time problems
+        - Geospatial / GPS issue
+        - Linkage or merge mismatch
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is wrong, which variables are affected and how many records?
+    validations:
+      required: true
+  - type: textarea
+    id: check
+    attributes:
+      label: Check or query used
+      description: The code or rule that surfaced the problem.
+      render: r
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact on analysis
+      description: Which outputs or decisions might be affected?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Data protection
+      options:
+        - label: This issue contains no personal or confidential information.
+          required: true

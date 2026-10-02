@@ -1,0 +1,67 @@
+name: 🐞 Bug report
+description: Something in the code, pipeline, app or report is not working as expected.
+title: "[Bug]: "
+labels: ["type: bug", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve. **Never paste confidential, personal or patient-level data** in this issue — use synthetic or anonymised examples.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A clear, concise description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproducible example
+      description: Steps or code (R / Python / SQL) that reproduce the problem. A `reprex` is ideal.
+      render: r
+      placeholder: |
+        library(...)
+        ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error messages / logs
+      description: Paste any console output. This is automatically formatted as code.
+      render: shell
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Analysis / statistical code
+        - Data pipeline / ETL
+        - Shiny app / dashboard
+        - R or Python package
+        - Report / document output
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: e.g. output of `sessionInfo()` (R) or `pip freeze` / `python --version` (Python), and your OS.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues for duplicates.
+          required: true
+        - label: This issue contains no confidential or personally identifiable data.
+          required: true
